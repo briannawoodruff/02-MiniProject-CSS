@@ -1,0 +1,129 @@
+:root {
+    --dark:  rgba(232, 102, 236, 0.6);
+    --light: white;
+    --background: rgb(50, 58, 66);
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--background);
+    font-size: 16px;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+}
+
+header > p {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: var(--light);
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  }
+
+section p {
+    padding: 10px;
+    color: var(--dark);
+}
+
+.code-card {
+    border-style: dashed;
+    border-color: var(--light);
+    border-width: 1px;
+    padding: 10px;
+    flex: 0 0 400px;
+    margin: 20px;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+ 
+
+div {
+  background: var(--dark);
+  color: var(--light);
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  background: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-card,
+.card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover, 
+.code-card:hover .card-header {
+   box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+}
+
+.card-header {
+  position: relative;
+  margin-top: -30px;
+  margin-right: auto;
+  font-size: 20px;
+  border-style: solid;
+  border-color: var(--light);
+  color: var(--dark);
+  background: var(--background);
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.all {
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+  @media screen and (max-width: 768px) {
+    body,
+    main {
+      flex-direction: column;
+    }
+}
